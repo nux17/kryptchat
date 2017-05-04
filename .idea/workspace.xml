@@ -2,15 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="300e1583-eb83-42e7-8cbe-2fe8ed3441b2" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kryptapp/kryptchat" afterPath="$PROJECT_DIR$/kryptapp/kryptchat" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kryptapp/core/admin.py" afterPath="$PROJECT_DIR$/kryptapp/core/admin.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kryptapp/core/authentication.py" afterPath="$PROJECT_DIR$/kryptapp/core/authentication.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kryptapp/core/models.py" afterPath="$PROJECT_DIR$/kryptapp/core/models.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kryptapp/core/serializers.py" afterPath="$PROJECT_DIR$/kryptapp/core/serializers.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kryptapp/core/views.py" afterPath="$PROJECT_DIR$/kryptapp/core/views.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kryptapp/kryptapp/settings.py" afterPath="$PROJECT_DIR$/kryptapp/kryptapp/settings.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kryptapp/kryptapp/urls.py" afterPath="$PROJECT_DIR$/kryptapp/kryptapp/urls.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -72,17 +64,17 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="settings.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/kryptapp/kryptapp/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="32" column="18" lean-forward="true" selection-start-line="32" selection-start-column="18" selection-end-line="32" selection-end-column="18" />
+            <state relative-caret-position="252">
+              <caret line="26" column="1" lean-forward="false" selection-start-line="26" selection-start-column="1" selection-end-line="26" selection-end-column="1" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/kryptapp/core/views.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="521">
@@ -166,10 +158,10 @@
         <option value="$PROJECT_DIR$/kryptapp/core/authentication.py" />
         <option value="$PROJECT_DIR$/kryptapp/core/admin.py" />
         <option value="$PROJECT_DIR$/kryptapp/core/models.py" />
-        <option value="$PROJECT_DIR$/kryptapp/kryptapp/settings.py" />
         <option value="$PROJECT_DIR$/kryptapp/core/serializers.py" />
         <option value="$PROJECT_DIR$/kryptapp/kryptapp/urls.py" />
         <option value="$PROJECT_DIR$/kryptapp/core/views.py" />
+        <option value="$PROJECT_DIR$/kryptapp/kryptapp/settings.py" />
       </list>
     </option>
   </component>
@@ -1097,14 +1089,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/kryptapp/kryptapp/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="32" column="18" lean-forward="true" selection-start-line="32" selection-start-column="18" selection-end-line="32" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/kryptapp/kryptapp/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="468">
@@ -1120,6 +1104,14 @@
           <folding>
             <element signature="e#0#44#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kryptapp/kryptapp/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="26" column="1" lean-forward="false" selection-start-line="26" selection-start-column="1" selection-end-line="26" selection-end-column="1" />
+          <folding />
         </state>
       </provider>
     </entry>
