@@ -124,7 +124,7 @@ class RequestView(APIView):
 def get_jwt_token(request):
     if request.method == 'POST':
         try: # Try auth based on given credentials
-            user = authenticate(**{'username': request.POST['username'], 'password': request.POST['password']})
+            user = authenticate(**{'username': request.data['username'], 'password': request.data['password']})
             if user: #Test payload
                 jwt = jwtencode({'user': str(user.id)}, "HS256", key=settings.SECRET_KEY)
                 return HttpResponse(status=200, content=jwt)
@@ -143,7 +143,7 @@ def get_jwt_token(request):
 def signup(request):
     try:
         if request.method == 'POST':
-            user = KryptUser.objects.create_user(request.POST['username'], date_of_birth=None, password=request.POST['password'])
+            user = KryptUser.objects.create_user(request.data['username'], date_of_birth=None, password=request.data['password'])
             jwt = jwtencode({'user': str(user.id)}, "HS256", key=settings.SECRET_KEY)
             return HttpResponse(status=201, content=jwt)
         else:
@@ -155,6 +155,6 @@ def signup(request):
 @api_view(['POST'])
 @authentication_classes([JWTAuth])
 def store_rsa_key(request):
-    request.user.rsa_public = request.POST['rsa']
+    request.user.rsa_public = request.data['rsa']
     request.user.save()
     return HttpResponse(status=200)

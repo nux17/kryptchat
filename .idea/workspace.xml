@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="300e1583-eb83-42e7-8cbe-2fe8ed3441b2" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kryptapp/kryptchat" afterPath="$PROJECT_DIR$/kryptapp/kryptchat" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kryptapp/core/views.py" afterPath="$PROJECT_DIR$/kryptapp/core/views.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -77,8 +78,8 @@
       <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/kryptapp/core/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="233">
-              <caret line="121" column="23" lean-forward="false" selection-start-line="121" selection-start-column="23" selection-end-line="121" selection-end-column="23" />
+            <state relative-caret-position="378">
+              <caret line="131" column="73" lean-forward="false" selection-start-line="131" selection-start-column="73" selection-end-line="131" selection-end-column="73" />
               <folding>
                 <element signature="e#0#44#0" expanded="true" />
               </folding>
@@ -1111,8 +1112,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/kryptapp/core/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="233">
-          <caret line="121" column="23" lean-forward="false" selection-start-line="121" selection-start-column="23" selection-end-line="121" selection-end-column="23" />
+        <state relative-caret-position="378">
+          <caret line="131" column="73" lean-forward="false" selection-start-line="131" selection-start-column="73" selection-end-line="131" selection-end-column="73" />
           <folding>
             <element signature="e#0#44#0" expanded="true" />
           </folding>
