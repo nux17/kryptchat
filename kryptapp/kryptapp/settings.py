@@ -88,19 +88,8 @@ WSGI_APPLICATION = 'kryptapp.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.10/ref/settings/#databases
 
-if not DEBUG:
-    DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.postgresql_psycopg2',
-            'NAME': 'kryptchat',
-            'USER': 'kryptchat',
-            'PASSWORD': 'nljq}:b;',
-            'HOST': 'localhost',
-            'PORT': '',
-        }
-    }
-else:
-    DATABASES = {
+
+DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.sqlite3',
             'NAME': 'kryptchat',
