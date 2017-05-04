@@ -4,7 +4,7 @@ from django.shortcuts import render
 from django.views.decorators.csrf import csrf_exempt
 from rest_framework import generics, views
 from django.db import transaction
-from rest_framework.decorators import authentication_classes, api_view, parser_classes
+from rest_framework.decorators import authentication_classes, api_view, parser_classes, permission_classes
 from rest_framework.response import Response
 from rest_framework.views import APIView
 from JWT import *
@@ -119,6 +119,7 @@ class RequestView(APIView):
 @csrf_exempt
 @api_view(['POST'])
 @authentication_classes([])
+@permission_classes([])
 @parser_classes([JSONParser, FormParser])
 def get_jwt_token(request):
     if request.method == 'POST':
@@ -136,6 +137,7 @@ def get_jwt_token(request):
 
 @api_view(['POST'])
 @parser_classes([JSONParser, FormParser])
+@permission_classes([])
 @authentication_classes([])
 @csrf_exempt
 def signup(request):
