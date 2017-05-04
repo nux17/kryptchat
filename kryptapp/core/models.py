@@ -10,18 +10,12 @@ import uuid
 
 
 class Message(models.Model):
-    uuid_id = models.UUIDField(auto_created=True, unique=True, default=uuid.uuid4, editable=False)
+    id = models.UUIDField(primary_key=True, unique=True, default=uuid.uuid4, editable=False)
     timestamp = models.DateTimeField('timestamp', editable=False, auto_now_add=True)
-    chat = models.ForeignKey('Chat', related_name='messages')
     user_from = models.ForeignKey(settings.AUTH_USER_MODEL, related_name='messages')
+    user_to = models.ForeignKey(settings.AUTH_USER_MODEL, related_name='my_messages')
     message_body = models.TextField()
-    read_by = models.ManyToManyField(settings.AUTH_USER_MODEL)
-
-
-class Chat(models.Model):
-    uuid_id = models.UUIDField(auto_created=True, unique=True, default=uuid.uuid4, editable=False)
-    users = models.ManyToManyField(settings.AUTH_USER_MODEL)
-
+    read = models.BooleanField(default=False)
 
 class UserManager(BaseUserManager):
     def create_user(self, username, date_of_birth=None, password=None):
@@ -59,12 +53,16 @@ class KryptUser(AbstractBaseUser):
         max_length=64,
         unique=True,
     )
+    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
+    rsa_public = models.TextField(null=True, blank=True)
     date_of_birth = models.DateField(null=True, blank=True)
     is_active = models.BooleanField(default=True)
     is_admin = models.BooleanField(default=False)
 
-    contacts = models.ManyToManyField('KryptUser', related_name='added_by')
-    contacts_request = models.ManyToManyField('KryptUser', related_name='requests')
+    email = models.EmailField(null=True, blank=True)
+
+    contacts = models.ManyToManyField('KryptUser', related_name='added_by', null=True, blank=True)
+    contacts_request = models.ManyToManyField('KryptUser', related_name='requests', null=True, blank=True)
 
     objects = UserManager()
 
@@ -80,7 +78,7 @@ class KryptUser(AbstractBaseUser):
         return self.email
 
     def __str__(self):              # __unicode__ on Python 2
-        return self.email
+        return self.username
 
     def has_perm(self, perm, obj=None):
         "Does the user have a specific permission?"

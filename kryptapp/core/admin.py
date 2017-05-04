@@ -3,16 +3,14 @@ from django.contrib import admin
 # Register your models here.
 
 
-from .models import Chat, Message
-
-
-class ChatAdmin(admin.ModelAdmin):
-    pass
+from .models import *
 
 
 class MessageAdmin(admin.ModelAdmin):
     pass
 
+class UserAdmin(admin.ModelAdmin):
+    pass
 
-admin.site.register(Chat, ChatAdmin)
+admin.site.register(KryptUser, UserAdmin)
 admin.site.register(Message, MessageAdmin)

@@ -16,6 +16,6 @@ class JWTAuth(BaseAuthentication):
             return None
         try: #Check if JWT is valid
             decoded = jwtdecode(jwt, "HS256", key=settings.SECRET_KEY)
-            return User.objects.get(username=decoded['username']), jwt  # Return logged in user
+            return User.objects.get(id=decoded['user']), jwt  # Return logged in user
         except Exception as e:
             raise exceptions.AuthenticationFailed('Authentication failed') # Failed auth

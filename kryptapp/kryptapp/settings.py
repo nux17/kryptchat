@@ -31,6 +31,9 @@ AUTH_USER_MODEL = 'core.KryptUser'
 # Application definition
 
 REST_FRAMEWORK = {
+    'DEFAULT_RENDERER_CLASSES': (
+        'rest_framework.renderers.JSONRenderer',
+    ),
     'DEFAULT_PERMISSION_CLASSES': (
         'rest_framework.permissions.IsAuthenticated',
     ),
@@ -87,14 +90,14 @@ WSGI_APPLICATION = 'kryptapp.wsgi.application'
 
 if not DEBUG:
     DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'kryptchat',
-        'USER': 'kryptchat',
-        'PASSWORD': 'nljq}:b;',
-        'HOST': 'localhost',
-        'PORT': '',
-    }
+        'default': {
+            'ENGINE': 'django.db.backends.postgresql_psycopg2',
+            'NAME': 'kryptchat',
+            'USER': 'kryptchat',
+            'PASSWORD': 'nljq}:b;',
+            'HOST': 'localhost',
+            'PORT': '',
+        }
     }
 else:
     DATABASES = {

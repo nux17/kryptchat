@@ -21,6 +21,11 @@ from core import views
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^api-token-auth/', views.get_jwt_token),
+    url(r'^login/', views.get_jwt_token),
+    url(r'^signup/', views.signup),
+    url(r'^rsa/', views.store_rsa_key),
+    url(r'^contacts/', views.ContactView.as_view()),
+    url(r'^requests/', views.RequestView.as_view()),
     url(r'^messages/$', views.MessageView.as_view()),
+    url(r'^get-all-messages/$', views.GetAllMessages.as_view()),
 ]
