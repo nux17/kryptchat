@@ -27,8 +27,11 @@ class MessageView(APIView):
     def get_queryset(self):
         return Message.objects.filter(user_to=self.request.user)
 
-    def get(self, request, format=None):
-        qset = Message.objects.filter(user_to=self.request.user, read=False)#.exclude(read_by=request.user)
+    def get(self, request, format=None, contact=None):
+        if contact:
+            qset = Message.objects.filter(user_to=self.request.user.id, user_from__username=contact, read=False)
+        else:
+            qset = Message.objects.filter(user_to=self.request.user.id, read=False)
         serializer = MessageSerializer(qset, many=True)
         with transaction.atomic():
             for i in qset:
@@ -52,8 +55,11 @@ class MessageView(APIView):
 class GetAllMessages(APIView):
     authentication_classes = (JWTAuth,)
 
-    def get(self, request, format=None):
-        qset = Message.objects.filter(user_to=self.request.user.id)
+    def get(self, request, format=None, contact=None):
+        if contact:
+            qset = Message.objects.filter(user_to=self.request.user.id, user_from__username=contact)
+        else:
+            qset = Message.objects.filter(user_to=self.request.user.id)
         serializer = MessageSerializer(qset, many=True)
         with transaction.atomic():
             for i in qset:

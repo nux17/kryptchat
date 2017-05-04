@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '+7!te&ume*il16_2npfxng#(bz6o@5nf%d#3@etig1o&mbz!!w'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['kryptchat.me', '127.0.0.1']
 
