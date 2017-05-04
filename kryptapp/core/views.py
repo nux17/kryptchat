@@ -38,8 +38,8 @@ class MessageView(APIView):
 
     def post(self, request, format=None):
         request.data['user_from'] = request.user.id
-        if KryptUser.objects.get(username=request.data['user_to']) not in request.user.contacts.all():
-            return Response(status=HTTP_403_FORBIDDEN)
+        #if KryptUser.objects.get(username=request.data['user_to']) not in request.user.contacts.all():
+        #    return Response(status=HTTP_403_FORBIDDEN)
         request.data['user_to'] = KryptUser.objects.get(username=request.data['user_to']).id
         serializer = MessageSerializer(data=request.data)
         if serializer.is_valid():
