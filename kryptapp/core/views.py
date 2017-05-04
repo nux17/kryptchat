@@ -118,6 +118,7 @@ class RequestView(APIView):
 # View called to obtain a JWT
 @csrf_exempt
 @api_view(['POST'])
+@authentication_classes([])
 @parser_classes([JSONParser, FormParser])
 def get_jwt_token(request):
     if request.method == 'POST':
@@ -135,6 +136,7 @@ def get_jwt_token(request):
 
 @api_view(['POST'])
 @parser_classes([JSONParser, FormParser])
+@authentication_classes([])
 @csrf_exempt
 def signup(request):
     try:
